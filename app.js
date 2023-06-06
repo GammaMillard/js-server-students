@@ -5,11 +5,11 @@ dotenv.config()
 
 export const app = express()
 export const port = process.env.PORT
+export const baseUrl = '/api'
 
 
 
-
-app.use('/', router)
+app.use(baseUrl, router)
 
 app.listen(port, () => {
     console.log('listening in port ' + port);
