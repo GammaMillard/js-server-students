@@ -8,14 +8,8 @@ const router = Router()
 
 
 router.get('/student', getStudents )
-
-
-
-
 router.get('/major', getMajors)
 router.get('/major/:major', getStudentsByMajor)
-
-
 router.get('/student/:id', getSingleStudent)
 
 
