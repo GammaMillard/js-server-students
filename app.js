@@ -14,3 +14,7 @@ app.use(baseUrl, router)
 app.listen(port, () => {
     console.log('listening in port ' + port);
 })
+
+
+
+export default app
