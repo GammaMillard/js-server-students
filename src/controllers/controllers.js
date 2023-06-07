@@ -1,5 +1,8 @@
 import students from "../../students/students.js"
 import { baseUrl } from "../../app.js";
+import Usuario from "../../models/usuario.js";
+import bcryptjs from 'bcryptjs'
+
 
 
 export const getStudents = (req, res) => {
@@ -68,4 +71,24 @@ export const getMajors = (req, res) => {
         results: {}
     })
     res.json(majors)
+}
+
+
+export const addStudent = async(req,res) => {
+   const usuario = new Usuario(req.body)
+
+
+   //Correo
+
+   //Encriptar la contraseña
+    const salt = bcryptjs.genSaltSync()
+    
+   //Guardaren DB
+
+  await  usuario.save()
+
+    res.json({
+        message: 'no',
+        body : usuario
+    })
 }
