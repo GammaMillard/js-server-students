@@ -14,7 +14,7 @@ const server = async () => {
     app.use( express.json() )
     app.use(baseUrl, router)
     app.listen(port, () => {
-        console.log('listening in port ' + port);
+       
     })
 
 }
